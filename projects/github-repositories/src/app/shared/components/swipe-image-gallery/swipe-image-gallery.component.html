@@ -1,0 +1,19 @@
+<div class="absolute top-0 right-0 bottom-0 left-0">
+    <div class="flex h-full overflow-x-auto snap-mandatory snap-x gap-2 h-full scrollbar-hide rounded-lg" #gallery>
+        <div class="snap-center flex-shrink-0 w-full h-full text-white flex justify-center z-30" *ngFor="let image of images">
+            <div [ngClass]="{'ch-image': show }" class="relative h-full w-full flex items-center overflow-hidden" [style.background]="'50% / ' + (presentation == 'contain' ? 'contain' : 'cover') + ' no-repeat url(\'' + image.src + '\')'" (click)="show = !show">
+                <div *ngIf="show" class="absolute w-full h-full flex flex-col justify-center items-center text-white z-30">
+                    <div class="absolute bottom-4 left-0 p-4 overflow-visible">
+                        <h2 class="my-2 text-xl text-darker">{{ image.title }}</h2>
+                        <h3 class="my-1 text-dark">{{ image.subtitle}}</h3>
+                        <!-- <p class="min-h-24 text-static_gray line-clamp-3">{{ image.description }}</p> -->
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="relative w-full p-2">
+        <!-- <pillow-indicator [selected]="(calcIndicator() | async)!"  (selectedChange)="changeIndicator($event)" [length]="images.length"></pillow-indicator> -->
+        <line-indicator [selected]="(calcIndicator() | async)!"  (selectedChange)="changeIndicator($event)" [length]="images.length"></line-indicator>
+    </div>
+</div>

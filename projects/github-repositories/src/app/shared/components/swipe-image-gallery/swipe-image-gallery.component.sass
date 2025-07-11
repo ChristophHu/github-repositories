@@ -1,0 +1,20 @@
+.ch-image
+    &::before, &::after
+        content: ''
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+
+    &::after
+        background-image: linear-gradient(to bottom, #902a4d00 10%, #000000cc 85%, #000000f5 98%)
+        z-index: 2
+        animation: fadeIn 300ms ease-in-out
+
+@keyframes fadeIn
+    0%
+        opacity : 0
+    100%
+        opacity : 1
+

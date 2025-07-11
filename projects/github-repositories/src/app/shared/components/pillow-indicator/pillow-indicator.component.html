@@ -1,0 +1,5 @@
+<div class="relative flex">
+    <ul class="flex flex-row h-4 w-full justify-center z-100">
+        <li class="h-2 w-2 ml-1 bg-light hover:bg-dark rounded-full cursor-pointer transition-all ease-in-out duration-200 active" *ngFor="let id of getRange(); index as i" (click)="setActive(id)" [ngClass]="{'active': selected == i}"></li>
+    </ul>
+</div>

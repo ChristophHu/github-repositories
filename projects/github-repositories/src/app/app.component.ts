@@ -1,12 +1,16 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { NgxGithubPagesDemoComponent } from '@christophhu/ngx-github-pages-demo';
+import { SwipeImageGalleryComponent } from './shared/components/swipe-image-gallery/swipe-image-gallery.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [
+    NgxGithubPagesDemoComponent,
+    SwipeImageGalleryComponent
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.sass'
 })
 export class AppComponent {
-  title = 'github-repositories';
+  
 }
