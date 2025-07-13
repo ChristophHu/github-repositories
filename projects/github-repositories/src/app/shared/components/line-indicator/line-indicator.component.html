@@ -1,7 +1,7 @@
 <div class="relative">
     <ul class="flex w-full z-100">
         <li class="px-2 group cursor-pointer" *ngFor="let id of getRange(); index as i" [ngStyle]="{'width': (100 / length) + '%', 'padding-left': '2px', 'padding-right': '2px'}" (click)="setActive(id)">
-            <div class="h-[2px] my-1 w-full bg-accent rounded-full group-hover:bg-dark" [ngClass]="{'bg-accent': selected == i}" [ngClass]="{'bg-light': selected != i}"></div>
+            <div class="h-[2px] my-1 w-full bg-dark rounded-full group-hover:bg-dark" [ngClass]="{'bg-dark': selected == i}" [ngClass]="{'bg-light': selected != i}"></div>
         </li>
     </ul>
 </div>
