@@ -2,8 +2,8 @@ import { CommonModule } from '@angular/common';
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { IconsComponent } from '../icons/icons.component';
 import { Observable, of } from 'rxjs';
-import { PillowIndicatorComponent } from '../pillow-indicator/pillow-indicator.component';
-import { LineIndicatorComponent } from '../line-indicator/line-indicator.component';
+import { PillowIndicatorComponent } from '../indicator/pillow-indicator/pillow-indicator.component';
+import { LineIndicatorComponent } from '../indicator/line-indicator/line-indicator.component';
 
 /**
  * This component is used to display a swipe image gallery
